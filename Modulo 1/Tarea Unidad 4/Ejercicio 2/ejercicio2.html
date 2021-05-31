@@ -8,12 +8,19 @@
 </head>
 <body>
     <script>
-        var alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-        var letra;
-        for(letra=0; letra==alfabeto; letra++){
-            letra=prompt('Ingrese una letra.','');
-        }
-        
-    </script>
+        var numeros = [5, 205, 38, 49, 50];
+        var mayor = 0;
+    
+        for (var i = 0; i < numeros.length; i++) {
+    
+        if (numeros[i] > mayor) {
+    
+                mayor = numeros[i];
+    
+           }
+       }
+    console.log('el mayor de ' + numeros + ' es ' + mayor);
+    
+     </script>
 </body>
 </html>
