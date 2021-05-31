@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+    var metros;
+    var i = 0;
+    while(i == 0){
+		metros=prompt('Ingrese la cantidad de metros que tiene que recorrer.','');
+		console.log(metros);
+		
+        if(metros > 0){
+            if(0 < metros && metros<= 1000){
+                alert("Pie");
+                
+            }
+            if(1000 < metros && metros<= 10000){
+                alert("Bicicleta");
+                
+            }
+            if(10000 < metros && metros<= 30000){
+                alert("Colectivo");
+                
+            }
+            if(30000 < metros && metros<= 100000){
+                alert("Auto");
+                
+            }
+            if(100000 < metros){
+                alert("Avion");
+                
+            }
+        } 
+        else{alert('Ingrese un valor valido');}
+    }        
+    </script>
+</body>
+</html>
