@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ejercicio2</title>
+</head>
+<body>
+    <form action="registro.php" method="post">
+        Ingrese Texto: <br>
+        <textarea name="Texto" id="texto" rows="15" cols="65"></textarea> <br>
+        Caracteres: <span id="contar"></span></div>
+    </form>
+    <script>
+        var texto = document.getElementById('texto');
+        var contar = document.getElementById('contar');
+        
+        texto.addEventListener('keyup', function(){
+            contar.innerText = texto.value.length;
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body id="fondo">
+    <h1>Seleccione el color que queres de fondo.</h1>
+    <p>
+        <button class="verde">Verde</button>
+    </p>
+    <p>
+        <button class="rojo">Rojo</button>
+    </p>
+    <p>
+        <button class="azul">Azul</button>
+    </p>
+    
+    <script>
+        var verde = document.getElementsByClassName('verde')[0];
+        verde.addEventListener('click', function(){
+            var fondo = document.getElementById('fondo');
+            fondo.style = 'background: green;'
+        });
+
+        var rojo = document.getElementsByClassName('rojo')[0];
+        rojo.addEventListener('click', function(){
+            var fondo = document.getElementById('fondo');
+            fondo.style = 'background: red;'
+        });
+
+        var azul = document.getElementsByClassName('azul')[0];
+        azul.addEventListener('click', function(){
+            var fondo = document.getElementById('fondo');
+            fondo.style = 'background: blue;'
+        });
+    </script>
+</body>
+</html>
