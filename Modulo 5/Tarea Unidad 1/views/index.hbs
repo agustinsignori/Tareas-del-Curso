@@ -1,0 +1,216 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">BEER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a data-scroll class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+            <a data-scroll class="nav-link" href="#novedades">Novedades</a>
+            <a data-scroll class="nav-link" href="#historia">Historia</a>
+            <a data-scroll class="nav-link" href="#nosotros">Nosotros</a>
+            <a data-scroll class="nav-link" href="#conocenos">Conocenos</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div id="home" class="row align-items-center hero">
+        <div class="col-lg-3 offset-lg-2">
+            <p>Bajada</p>
+            <h1>Titulo Principal</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Eius iste corrupti, fugiat nesciunt adipisci ea,
+                totam perferendis omnis quos ipsa tempore repudiandae est numquam,
+                eveniet at modi. Iste, eaque minus.</p>
+        </div>
+    </div>
+    <div id="novedades" class="row py-4">
+        <div class="col-md-5 offset-md-2 py-3">
+            <h2>Novedades</h2>
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li><a data-toggle="modal" data-target="#modal{{id}}" href="javascript:void(0)">
+                    <img src="images/novedades01.jpg">{{titulo}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{#each novedades}}
+        <div class="modal fade" id="modal{{id}}" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{titulo}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" data-dimiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <h6>{{subtitulo}}</h6>
+                        <p>{{cuerpo}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+        <div class="col-md-3">
+            <div class="rounded py-3 testimonios">
+                <h2 class="text-center">Testimonios</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonio">
+                                <h5>"La mejor birra del mundo!!"</h5>
+                                <p>Francisto, Monte Grande</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonio">
+                                <h5>"La mejor birra del mundo 2!!"</h5>
+                                <p>Flavia, Devoto</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonio">
+                                <h5>"La mejor birra del mundo 3!!"</h5>
+                                <p>Eric, Mataderos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="historia" class="row align-items-center py-4">
+        <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+            <img src="images/historia_1.jpg" alt="historia 1" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-md-3 d-none d-sm-block">
+            <img src="images/historia_2.jpg" alt="historia 2" class="img-fluid">
+        </div>
+        <div class="col-12 d-sm-none">
+            <img src="images/historia_3.jpg" alt="historia 3" class="img-fluid">
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4 nt-sm-0">
+            <h2>Historia</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestias molestiae sunt dolor quasi corporis dicta tenetur
+                mollitia ratione quis porro at, eum adipisci modi, doloribus
+                iure cupiditate quam ab natus?</p>
+        </div>
+    </div>
+    <div id="nosotros" class="row align-items-stretch my-3 staff py-4">
+        <div class="col-lg-8 offset-lg-2">
+            <h2>Nosotros</h2>
+            <div class="card-deck">
+                <div class="card">
+                    <img src="images/nosotros01.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/nosotros02.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/nosotros03.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/nosotros04.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="conocenos" class="row py-4">
+        <div class="col-md-4 offset-md-2">
+            <h2>Visitanos</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26258.
+              80824952235!2d-58.533877837732284!3d-34.64583679255587!2m3!1f0!2f0!3f0!3m2
+              !1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc859aaa65adf%3A0xd222bfdac3e4f29a!2sRusticana
+              !5e0!3m2!1ses!2sar!4v1624750659424!5m2!1ses!2sar" style="border:0;" allowfullscreen=""
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-sm-0">
+            <h2>Contactanos</h2>
+            <form action="/" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="...">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="...">
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@email.com">
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="tel">Tel</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="...">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+            {{message}}
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p class="text-center">Diseñado por: Agustin Signori año 2021</p>
+</footer>
